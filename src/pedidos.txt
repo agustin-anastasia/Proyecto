@@ -1,0 +1,2 @@
+idPedido,tipoLocal,MomentoIngreso,MomentoPreparacion,MomentoRepartidor
+pedido1,Farmacia,4,6,3

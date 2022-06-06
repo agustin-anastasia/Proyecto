@@ -3,22 +3,26 @@ import java.util.concurrent.Semaphore;
 
 public class Pedido extends Thread {
 
-    Integer prioridad;
-    DateFormat horaPedido;
-    Cliente cliente;
-    public Semaphore semaphore;
+    private Integer prioridad;
+    private DateFormat horaPedido;
+    private Integer cliente;
+    private Local local;
+
+    public Semaphore semaforo;
 
 
-    public Pedido(Integer prioridad, DateFormat horaPedido,  Cliente cliente, Semaphore semaphore){
+    public Pedido(Integer prioridad, DateFormat horaPedido,  Integer cliente, Semaphore semaphore){
         this.prioridad = prioridad;
         this.horaPedido = horaPedido;
         this.cliente = cliente;
-        this.semaphore = semaphore;
+        this.semaforo = semaphore;
     }
     
-    public void signalSemaphore() {
-        this.semaphore.release();
+    public void releaseSemaforo() {
+        this.semaforo.release();
     }
+
+
 
     @Override
     public void run(){

@@ -1,17 +1,17 @@
-
 public class Local {
-
 
     String nombre;
     Integer id;
     Integer direccion;
     Integer tipoLocal;
+    Integer prioridad;
 
     public Local (String nombre, Integer id, Integer direccion, Integer tipoLocal, Integer prioridad){
-        this.nombre=nombre;
-        this.id=id;
-        this.direccion=direccion;
-        this.tipoLocal =tipoLocal;
+        this.nombre = nombre;
+        this.id = id;
+        this.direccion = direccion;
+        this.tipoLocal = tipoLocal;
+        this.prioridad = prioridad;
     }
 
   
